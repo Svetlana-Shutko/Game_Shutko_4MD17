@@ -1,0 +1,92 @@
+{
+  "id": "chapter3",
+  "title": "Глава III",
+  "subtitle": "Город",
+  "biome": "city",
+  "final": true,
+  "width": 8000,
+  "killY": 780,
+  "seed": 41,
+  "cityEnd": 6700,
+  "endText": "Всё это время кто-то держал его за руку.",
+
+  "atmosphere": [
+    { "x": 0, "light": 0.82, "fog": 0.9, "thread": 0.95 },
+    { "x": 2000, "light": 0.78, "fog": 0.95, "thread": 0.85 },
+    { "x": 3000, "light": 0.74, "fog": 1.05, "thread": 0.75 },
+    { "x": 4500, "light": 0.72, "fog": 1.0, "thread": 0.62 },
+    { "x": 5800, "light": 0.7, "fog": 1.1, "thread": 0.5 },
+    { "x": 6500, "light": 0.95, "fog": 1.15, "thread": 0.42, "soft": 0.1 },
+    { "x": 6900, "light": 1.35, "fog": 1.2, "thread": 0.35, "soft": 0.35 },
+    { "x": 7500, "light": 1.6, "fog": 1.25, "thread": 0.3, "soft": 0.5 }
+  ],
+
+  "solids": [
+    { "x": -220, "y": -600, "w": 240, "h": 1500, "style": "wall" },
+    { "x": -220, "y": 430, "w": 3120, "h": 420, "style": "stone" },
+    { "x": 1040, "y": -600, "w": 760, "h": 930, "style": "stone" },
+    { "x": 2300, "y": 300, "w": 100, "h": 30, "style": "stone" },
+    { "x": 2590, "y": -600, "w": 84, "h": 850, "style": "stone" },
+    { "x": 3420, "y": 420, "w": 60, "h": 430, "style": "stone" },
+    { "x": 3660, "y": 300, "w": 240, "h": 550, "style": "stone" },
+    { "x": 3900, "y": 430, "w": 600, "h": 420, "style": "stone" },
+    { "x": 4590, "y": 480, "w": 50, "h": 370, "style": "stone" },
+    { "x": 4730, "y": 480, "w": 50, "h": 370, "style": "stone" },
+    { "x": 4870, "y": 480, "w": 50, "h": 370, "style": "stone" },
+    { "x": 5010, "y": 480, "w": 50, "h": 370, "style": "stone" },
+    { "x": 5100, "y": 430, "w": 700, "h": 420, "style": "stone" },
+    { "x": 5250, "y": -600, "w": 420, "h": 930, "style": "stone" },
+    { "x": 6150, "y": 430, "w": 550, "h": 420, "style": "stone" },
+    { "x": 6700, "y": 430, "w": 1300, "h": 420, "style": "floor" },
+    { "x": 7960, "y": -600, "w": 300, "h": 1500, "style": "wall" }
+  ],
+
+  "water": [
+    { "x": 2900, "y": 470, "w": 1000, "h": 380, "current": 0 },
+    { "id": "pool", "x": 4500, "y": 440, "w": 600, "h": 400, "current": 0, "drainTo": 572, "drainSpeed": 45 }
+  ],
+
+  "checkpoints": [
+    { "id": "cp0", "x": 170, "y": 430 },
+    { "id": "cp1", "x": 960, "y": 430 },
+    { "id": "cp2", "x": 1900, "y": 430 },
+    { "id": "cp3", "x": 2840, "y": 430 },
+    { "id": "cp4", "x": 3960, "y": 430 },
+    { "id": "cp5", "x": 4380, "y": 430 },
+    { "id": "cp6", "x": 5150, "y": 430 },
+    { "id": "cp7", "x": 5730, "y": 430 },
+    { "id": "cp8", "x": 6200, "y": 430 },
+    { "id": "cp9", "x": 6780, "y": 430 }
+  ],
+
+  "entities": [
+    { "type": "piston", "id": "p1", "x": 1160, "w": 64, "top": 330, "up": 350, "down": 430, "period": 2.6, "offset": 0 },
+    { "type": "piston", "id": "p2", "x": 1400, "w": 64, "top": 330, "up": 350, "down": 430, "period": 2.6, "offset": 0.9 },
+    { "type": "piston", "id": "p3", "x": 1640, "w": 64, "top": 330, "up": 350, "down": 430, "period": 2.6, "offset": 1.8 },
+    { "type": "lever", "id": "lever1", "x": 2350, "y": 300, "targets": ["door1"] },
+    { "type": "door", "id": "door1", "x": 2620, "y": 250, "w": 24, "h": 180 },
+    { "type": "mover", "id": "m1", "path": [[2905, 440], [3330, 440]], "w": 90, "speed": 80 },
+    { "type": "mover", "id": "m2", "path": [[3560, 440], [3560, 300]], "w": 90, "speed": 60 },
+    { "type": "ghost", "id": "child", "x": 4200, "y": 430, "radius": 150 },
+    { "type": "lever", "id": "valve", "x": 4440, "y": 430, "targets": ["pool"] },
+    { "type": "piston", "id": "p4", "x": 5320, "w": 64, "top": 330, "up": 350, "down": 430, "period": 2.2, "offset": 0.4 },
+    { "type": "piston", "id": "p5", "x": 5540, "w": 64, "top": 330, "up": 350, "down": 430, "period": 2.2, "offset": 1.4 },
+    { "type": "mover", "id": "m3", "path": [[5808, 430], [6052, 430]], "w": 90, "speed": 85 },
+    { "type": "creature", "id": "roofwalker", "layer": 0.36, "speed": 80, "groundY": 470 }
+  ],
+
+  "triggers": [
+    { "x": 420, "event": "chapterTitle" },
+    { "x": 2750, "event": "distantBeep" },
+    { "x": 5900, "event": "creature" },
+    { "x": 6600, "event": "beeps", "level": 0.35, "interval": 1.0, "replay": true },
+    { "x": 7000, "event": "beeps", "level": 0.6, "interval": 0.85, "replay": true },
+    { "x": 7420, "event": "ending", "white": true, "final": true, "word": "Сынок…" }
+  ],
+
+  "decor": {
+    "lamps": [{ "x": 600 }, { "x": 2050 }, { "x": 2780 }, { "x": 4100 }, { "x": 5180 }, { "x": 6400 }],
+    "children": [{ "x": 2500, "y": 494 }, { "x": 5000, "y": 494 }],
+    "room": { "x": 7300 }
+  }
+}

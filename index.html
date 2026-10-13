@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Нить</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main id="stage" aria-label="Игра «Нить»">
+    <canvas id="game" width="960" height="540"></canvas>
+    <div id="ui">
+      <div id="chapter-card" class="chapter-card" aria-live="polite">
+        <span class="cc-kicker"></span>
+        <span class="cc-title"></span>
+      </div>
+      <div id="hint" class="hint"></div>
+      <div id="saving" class="saving" aria-live="polite">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12c0-4 3.5-7 8-7s8 3 8 7-3.5 7-8 7c-3 0-5-1.6-5-4s2-4 5-4 4 1.5 4 3"/></svg>
+        <span>сохранено</span>
+      </div>
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+      <div id="word" class="word" aria-live="polite"></div>
+      <div id="menu" class="menu" hidden></div>
+      <div id="boot" class="boot">
+        <p class="boot__title">Нить</p>
+        <p class="boot__text">Загрузка…</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Порядок важен: каждый файл дополняет общий объект window.NIT -->
+  <script src="levels/levels.bundle.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/save.js"></script>
+  <script src="js/levels.js"></script>
+  <script src="js/rope.js"></script>
+  <script src="js/entities.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/world.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+{
+  "id": "chapter1",
+  "title": "Глава I",
+  "subtitle": "Лес",
+  "width": 7960,
+  "killY": 780,
+  "seed": 7,
+  "endText": "Нить уходит дальше, в туман над болотом.",
+
+  "atmosphere": [
+    { "x": 0, "light": 0.96, "fog": 0.55 },
+    { "x": 2400, "light": 0.9, "fog": 0.62 },
+    { "x": 4200, "light": 0.8, "fog": 0.8 },
+    { "x": 5600, "light": 0.88, "fog": 0.62 },
+    { "x": 7000, "light": 1.0, "fog": 0.9 },
+    { "x": 7960, "light": 1.08, "fog": 1.15 }
+  ],
+
+  "solids": [
+    { "x": -220, "y": -600, "w": 240, "h": 1500, "style": "trunk" },
+    { "x": -220, "y": 430, "w": 900, "h": 420 },
+    { "x": 440, "y": 404, "w": 64, "h": 26, "style": "log" },
+    { "x": 680, "y": 468, "w": 84, "h": 382 },
+    { "x": 764, "y": 430, "w": 1736, "h": 420 },
+    { "x": 2500, "y": 318, "w": 500, "h": 532 },
+    { "x": 3330, "y": 384, "w": 430, "h": 466 },
+    { "x": 3990, "y": 384, "w": 160, "h": 466 },
+    { "x": 4150, "y": 407, "w": 60, "h": 443 },
+    { "x": 4210, "y": 430, "w": 790, "h": 420 },
+    { "x": 5420, "y": 430, "w": 2540, "h": 420 },
+    { "x": 7940, "y": -600, "w": 300, "h": 1500, "style": "trunk" }
+  ],
+
+  "water": [
+    { "x": 5000, "y": 462, "w": 420, "h": 380, "current": 55 }
+  ],
+
+  "checkpoints": [
+    { "id": "cp0", "x": 170, "y": 430 },
+    { "id": "cp1", "x": 1080, "y": 430 },
+    { "id": "cp2", "x": 1960, "y": 430 },
+    { "id": "cp3", "x": 2620, "y": 318 },
+    { "id": "cp4", "x": 3420, "y": 384 },
+    { "id": "cp5", "x": 4060, "y": 384 },
+    { "id": "cp6", "x": 4820, "y": 430 },
+    { "id": "cp7", "x": 5520, "y": 430 },
+    { "id": "cp8", "x": 6150, "y": 430 },
+    { "id": "cp9", "x": 6650, "y": 430 },
+    { "id": "cp10", "x": 7000, "y": 430 }
+  ],
+
+  "entities": [
+    { "type": "trap", "id": "trap1", "x": 1300, "y": 430 },
+    { "type": "trap", "id": "trap2", "x": 1580, "y": 430 },
+    { "type": "box", "id": "box1", "x": 2150, "y": 430, "w": 44, "h": 44 },
+    { "type": "trap", "id": "trap3", "x": 2380, "y": 430 },
+    { "type": "hook", "id": "branch1", "x": 3165, "y": 150, "auto": true, "range": 270, "releaseAngle": 26, "trunkX": 3440, "branchY": 92 },
+    { "type": "hook", "id": "branch2", "x": 3875, "y": 205, "auto": false, "range": 230, "trunkX": 4085, "branchY": 118, "ropeLength": 165 },
+    { "type": "ghost", "id": "child1", "x": 4560, "y": 430, "radius": 150 },
+    { "type": "log", "id": "log1", "x": 5290, "w": 130, "h": 20, "tieRange": 420 },
+    { "type": "tree", "id": "tree1", "x": 5980, "y": 430, "height": 230, "dir": -1, "trigger": 5660, "creak": 0.45, "fall": 0.65 },
+    { "type": "tree", "id": "tree2", "x": 6380, "y": 430, "height": 230, "dir": 1, "trigger": 6250, "creak": 0.4, "fall": 0.6 },
+    { "type": "tree", "id": "tree3", "x": 6830, "y": 430, "height": 270, "dir": -1, "trigger": 6740, "creak": 0.3, "fall": 0.85 },
+    { "type": "creature", "id": "watcher", "layer": 0.6, "speed": 120, "groundY": 520 }
+  ],
+
+  "triggers": [
+    { "x": 420, "event": "chapterTitle" },
+    { "x": 4380, "event": "distantBeep" },
+    { "x": 7050, "event": "beeps", "level": 0.35, "interval": 0.95, "replay": true },
+    { "x": 7250, "event": "fog", "value": 1.0, "replay": true },
+    { "x": 7150, "event": "creature" },
+    { "x": 7480, "event": "beeps", "level": 0.75, "interval": 0.8, "replay": true },
+    { "x": 7700, "event": "ending" }
+  ],
+
+  "decor": {
+    "grass": [
+      { "x": 560, "w": 90, "h": 12, "density": 0.9 },
+      { "x": 1250, "w": 150, "h": 20, "density": 1.7 },
+      { "x": 1545, "w": 30, "h": 7, "density": 0.5 },
+      { "x": 2040, "w": 80, "h": 12, "density": 0.8 },
+      { "x": 3460, "w": 120, "h": 14, "density": 1.0 },
+      { "x": 4290, "w": 400, "h": 22, "density": 1.2 },
+      { "x": 4850, "w": 110, "h": 14, "density": 0.9 },
+      { "x": 5520, "w": 100, "h": 12, "density": 0.9 },
+      { "x": 7100, "w": 300, "h": 18, "density": 1.0 }
+    ],
+    "puddles": [
+      { "x": 684, "y": 468, "w": 76 }
+    ],
+    "stumps": [
+      { "x": 905, "y": 430, "h": 24 },
+      { "x": 1790, "y": 430, "h": 16 },
+      { "x": 2760, "y": 318, "h": 20 },
+      { "x": 4430, "y": 430, "h": 14 },
+      { "x": 7220, "y": 430, "h": 22 }
+    ],
+    "children": [
+      { "x": 7330, "y": 492 },
+      { "x": 7600, "y": 488 }
+    ]
+  }
+}
